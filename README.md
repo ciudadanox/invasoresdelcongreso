@@ -3,6 +3,8 @@ Invasores del congreso
 
 Un juego para devolver el poder soberano a las personas y resetear el espacio político, en definitiva «una operación de desalojo del hemiciclo». 
 
+http://invasoresdelcongreso.com
+
 Instrucciones de juego
 ======================
 1. presiona 'desalojar' para iniciar
