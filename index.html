@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-		<title>Space Invaders</title>
+		<title>Invasores del congreso</title>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8"> 
 		<style type="text/css">
 			@font-face {
@@ -316,7 +316,7 @@
 			This work is licensed under a Creative Commons Attribution - Share Alike 3.0 - Unported license (CC BY-SA 3.0). 
 			The text of the license is available at http://creativecommons.org/licenses/by-sa/3.0/
 			############################################################################################################# */
-			
+		
 			var microSpaceInvaders = function() {
 				
 				// element selector
@@ -358,7 +358,7 @@
 				var container = $("#game"); 
 				var img, canvas, context, frameCounter, isGameOver;
 				//var spriteSheet = "si_sprite_sheet_bw.png";
-				var spriteSheet = "data:image/png;base64,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%3D";					
+				var spriteSheet = "data:image/png;base64,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";
 				
 				var sprites = {
 					alien_1: 			{	id: "alien_1",										
@@ -601,12 +601,12 @@
 					flyingSaucerTimer: null, 
 					arrAliens: null, 
 					alienBorderCollision: null,
-					alienBulletSpeed: 10,
+					alienBulletSpeed: 30,
 					nAlienRows: 5,
 					nAliensByRow: 11,
 					alienSquareWidth: 60,
 					alienSquareHeight: 40,
-					alienSpeedX: 10,
+					alienSpeedX: 30,
 					alienSpeedY: 40,
 					alienInitialY: 160,
 					flyingSaucerInitialY: 100,
@@ -623,7 +623,7 @@
 						var sprite, points;
 						for (var r = 0; r < this.nAlienRows; r++)
 						{
-							if (r == 0)
+							/*if (r == 0)
 							{
 								sprite = sprites.alien_1;
 								points = 30;
@@ -637,15 +637,26 @@
 							{
 								sprite = sprites.alien_3;
 								points = 10;
-							}
+							}*/
 							
-							for (var a = 0; a < this.nAliensByRow; a++)
+							for (var a = 0; a < Math.round(this.nAliensByRow / 2); a++)
 							{
+								sprite = sprites.alien_2;
+								points = 20;
 								this.arrAliens.push(new ship({	sprite: sprite, 
 																x: (a*this.alienSquareWidth)+(this.alienSquareWidth-sprite.width)/2, 
 																y: r*this.alienSquareHeight+this.alienInitialY, 
 																points: points	}));
 							}							
+							for (var a = Math.round(this.nAliensByRow / 2); a < this.nAliensByRow; a++)
+							{
+								sprite = sprites.alien_3;
+								points = 10;
+								this.arrAliens.push(new ship({	sprite: sprite, 
+																x: (a*this.alienSquareWidth)+(this.alienSquareWidth-sprite.width)/2, 
+																y: r*this.alienSquareHeight+this.alienInitialY, 
+																points: points	}));
+							}	
 						}
 					},
 					
@@ -838,7 +849,7 @@
 					cannonBullet: null, 
 					moveCannon: null, 
 					cannonFire: null,						
-					cannonSpeed: 8,						
+					cannonSpeed: 5,						
 					cannonBulletSpeed: 10,
 					score: 0,
 					credit: 0,
@@ -967,16 +978,28 @@
 				//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 				var bunkers = {
 					arrBunker: null,
-					nBunkers: 4,
+					nBunkers: 5,
 					
 					init: function() {
 						this.arrBunker = [];
 						var x, y;
+                        var bunker0 = 'sanidad';
+                        var bunker1 = 'educación';
+                        var bunker2 = 'vivienda';
+                        var bunker3 = 'pensiones';
+                        var bunker4 = 'medioambiente';
 						for (var i = 0; i < this.nBunkers; i++)
 						{
 							x = (canvas.width / (this.nBunkers*2)) - ((sprites.bunkerFull.width*4) / 2) + (i * (canvas.width / this.nBunkers)); 
-							y = (canvas.height-180);
+							y = (canvas.height-200);
 							this.arrBunker.push(new bunker({x: x, y: y}));
+
+                            var bunkerTxt = 'bunker' + i;
+                            var txtArea = new textHelper.textArea({	cls: "field livesField", 
+																childs: [textHelper.writeText({cls: "text smallText", id: "bunker" + i, text: eval(bunkerTxt)})],
+																appendTo: container,
+																left: (x - 20) + "px",
+																top: (y + 80) + "px" });
 						}
 					},
 					
@@ -985,10 +1008,12 @@
 						for (var i = 0, b = this.arrBunker.length; i < b; i++)
 						{
 							bk = this.arrBunker[i];
+
 							for (var j = 0, t = bk.blocks.length; j < t; j++)
 							{
 								block = bk.blocks[j];
 								context.drawImage(img, block.sprite.tiles[block.tileId].x, block.sprite.tiles[block.tileId].y, block.sprite.width, block.sprite.height, block.x, block.y, block.sprite.width, block.sprite.height);
+
 							}
 						}							
 					}
@@ -1284,6 +1309,16 @@
 					textHelper.updateText("#credit", textHelper.pad(human.credit, 2, '0', 'L'));
 					textHelper.removeText("#insertCoins");
 				};
+
+                var verprograma = function(e) {
+					// stop event propagation on "play" button
+					if (!e) var e = window.event;
+					e.cancelBubble = true;
+					if (e.stopPropagation) e.stopPropagation();
+					
+                    window.location.href = "http://partidodelfuturo.net/programa/"
+                    return;
+                }
 				
 				var checkcredit = function(e) {
 					// stop event propagation on "play" button
@@ -1315,7 +1350,7 @@
 
 						// score
 						var txtArea = new textHelper.textArea({	cls: "field scoreField", 
-																childs: [	textHelper.writeText({cls: "text scoreText", text: "score <1>"}),
+																childs: [	textHelper.writeText({cls: "text scoreText", text: "votos "}),
 																				textHelper.writeText({cls: "text scoreText", id: "scorePlayer1", text: textHelper.pad(human.score, 4, '0', 'L')}) ],
 																appendTo: container,
 																left: "0px",
@@ -1323,7 +1358,7 @@
 
 						// credit
 						txtArea = new textHelper.textArea({	cls: "field", 
-															childs: [textHelper.writeText({cls: "text creditText", innerhtml: "credit <span id='credit'>" + textHelper.pad(human.credit, 2, '0', 'L') + "</span>"})],
+															childs: [textHelper.writeText({cls: "text creditText", innerhtml: "oportunidades restantes <span id='credit'>" + textHelper.pad(human.credit, 2, '0', 'L') + "</span>"})],
 															appendTo: container,
 															right: "0px",
 															bottom: "0px" });	
@@ -1364,9 +1399,8 @@
 					
 					// game menu
 					var txtArea = new textHelper.textArea({	cls: "field", 
-																					childs: [	textHelper.writeText({id: "play", cls: "text clickText menuText", innerhtml: "pla<span id='span_container'><span id='span_y'>y</span><span id='span_img'></span></span>", onclick: checkcredit}),
-																									textHelper.writeText({id: "SpaceInvadersText", cls: "text", text: "space invaders"}),																			
-																									textHelper.writeText({id: "insertCoins", cls: "text clickText insertCoins", text: "insert coin(s)", onclick: insertCoin})	],
+																					childs: [	textHelper.writeText({id: "play", cls: "text clickText menuText", innerhtml: "desaloja<span id='span_container'><span id='span_y'>r</span><span id='span_img'></span></span>", onclick: checkcredit}),
+																									textHelper.writeText({id: "SpaceInvadersText", cls: "text", text: "invasores del congreso"}) ],
 																					appendTo: container,
 																					width: canvas.width,
 																					position: "centerH",
@@ -1374,30 +1408,24 @@
 															
 					// score advance
 					txtArea = new textHelper.textArea({	cls: "field scoreAdvanceTableField", 
-																				childs: [	textHelper.writeText({cls: "text scoreAdvanceText", text: "*score advance table*"}),
+																				childs: [	textHelper.writeText({cls: "text scoreAdvanceText", text: "*precio del escaño*"}),
 																				
 																								textHelper.writeText({innerhtml:	"<ul id='scoreAdvanceTable'>" +
-																																					"<li><span><span id='span_score_mystery'></span></span><p id='score_mystery' class='text scoreAdvanceText'>= ? mystery</p></li>" +
-																																					"<li><span><span id='span_score_30'></span></span><p id='score_30' class='text scoreAdvanceText'>= 30 points</p></li>" +
-																																					"<li><span><span id='span_score_20'></span></span><p id='score_20' class='text scoreAdvanceText'>= 20 points</p></li>" +
-																																					"<li><span><span id='span_score_10'></span></span><p id='score_10' class='text scoreAdvanceText'>= 10 points</p></li>" +
+																																					"<li><span><span id='span_score_mystery'></span></span><p id='score_mystery' class='text scoreAdvanceText'>= ? corona</p></li>" +
+																																					//"<li><span><span id='span_score_30'></span></span><p id='score_30' class='text scoreAdvanceText'>= 30 votos</p></li>" +
+																																					"<li><span><span id='span_score_20'></span></span><p id='score_20' class='text scoreAdvanceText'>= 20 votos</p></li>" +
+																																					"<li><span><span id='span_score_10'></span></span><p id='score_10' class='text scoreAdvanceText'>= 10 votos</p></li>" +
 																																					"</ul>"})	],
 																				appendTo: container,
 																				width: 450,
 																				position: "centerH",
 																				top: "50%" });
 															
-					// credit
-					txtArea = new textHelper.textArea({	cls: "field", 
-																				childs: [textHelper.writeText({cls: "text creditText", innerhtml: "credit <span id='credit'>" + textHelper.pad(human.credit, 2, '0', 'L') + "</span>"})],
-																				appendTo: container,
-																				right: "0px",
-																				bottom: "0px" });
+
 
 					// copyright
 					txtArea = new textHelper.textArea({	cls: "field", 
-																				childs: [	textHelper.writeText({id: "instructionsLink", cls: "text clickText smallText", text: "instructions", onclick: screens.instructions}),
-																								textHelper.writeText({id: "copyright", cls: "text smallText", innerhtml: "[ <a href='http://www.matteopiazza.org/blog/post/2012/03/28/Space-Invaders-HTML5-porting.aspx'>JH5 binary arts</a> ]"})	],
+																				childs: [	textHelper.writeText({id: "instructionsLink", cls: "text clickText smallText", text: "instrucciones", onclick: screens.instructions}) ],
 																				appendTo: container,
 																				width: 400,
 																				position: "centerBottom" });															
@@ -1405,7 +1433,7 @@
 					// typewriting animation
 					// set score advance table background images
 					$("#span_score_mystery").style["background"] = "url('" + spriteSheet + "') -4px -122px no-repeat";
-					$("#span_score_30").style["background"] = "url('" + spriteSheet + "') -4px -4px no-repeat";
+					//$("#span_score_30").style["background"] = "url('" + spriteSheet + "') -4px -4px no-repeat";
 					$("#span_score_20").style["background"] = "url('" + spriteSheet + "') -4px -40px no-repeat";
 					$("#span_score_10").style["background"] = "url('" + spriteSheet + "') -4px -76px no-repeat";
 					// start typewriting
@@ -1425,49 +1453,7 @@
 						}
 					};				
 				
-					var animatePlay = function() {
-						var span_container = $("#span_container");
-						var span_img = $("#span_img");
-						var span_y = $("#span_y");
-						var rightEdge = container.offsetWidth/2 + aliens.alienSquareWidth + "px";								
 
-						span_img.style["background-image"] = "url('" + spriteSheet + "')";
-
-						// animation callback
-						var animate = function(e) {
-							switch (e.target.id) {
-								case "span_img":
-									if (e.propertyName == "left")
-										span_container.style["left"] = rightEdge;
-									break;
-								case "span_container":
-									if ($("#span_y.end") != null) 
-										span_img.className = "end";
-										
-									if ($("#span_img.end") != null)
-										span_img.style["opacity"] = "0";
-
-									span_container.style["left"] = "0";
-									span_y.className = "end";
-									break;
-							}
-						};	
-						
-
-						// eventhandlers
-						setEventListener("#span_img", "transitionend", animate);
-						setEventListener("#span_container", "transitionend", animate);
-
-						
-						// start animation
-						span_img.style["left"] = rightEdge;	// set image position on window right border				
-						
-						setTimeout(function(){
-							span_img.className = "slide";	// set transition/animation properties
-							span_img.style["left"] = "0";	// start transition
-						}, t);
-					}();						
-					///
 					
 					// animation loop
 					var gameWrapper = $("#game");
@@ -1503,13 +1489,12 @@
 					var txtArea = new textHelper.textArea({	id: "divInstructions",
 																					cls: "field instructionsFieldFrame", 
 																					childs: [	textHelper.writeText({cls: "text instructionsText", innerhtml: 	"<ol>" +
-																																								"<li>press 'c' or click 'insert coin(s)'</li>" +
-																																								"<li>press 'play' to start game</li>" +
-																																								"<li>left/right keys to move cannon</li>" +
-																																								"<li>'spacebar' to shot</li>" +
+																																								"<li>presiona 'desalojar' para iniciar</li>" +
+																																								"<li>teclas izquierda/derecha para orientar tu voto</li>" +
+																																								"<li>'barra espaciadora' para votar y desalojar diputados</li>" +
 																																								"</ol>"}),
 																								
-																									textHelper.writeText({cls: "text clickText menuText", text: "close", onclick: function(){textHelper.removeTextArea("divInstructions");}}) ],
+																									textHelper.writeText({cls: "text clickText menuText", text: "cerrar", onclick: function(){textHelper.removeTextArea("divInstructions");}}) ],
 																					appendTo: container,
 																					position: "centerHV" });
 				};
@@ -1519,8 +1504,9 @@
 					if (!$("#divGameOver")) {
 						var txtArea = new textHelper.textArea({	id: "divGameOver",
 																						cls: "field menuFieldFrame", 
-																						childs: [	textHelper.writeText({cls: "text menuHeaderText", text: "game over"}),
-																									textHelper.writeText({cls: "text clickText menuText", text: "play again", onclick: checkcredit}) ],
+																						childs: [	textHelper.writeText({cls: "text menuHeaderText", text: "desalojo fallido"}),
+																									textHelper.writeText({cls: "text menuText", text: "vamos a ganarles en su mismo juego" }),
+																									textHelper.writeText({cls: "text clickText menuText", text: "infórmate cómo conseguirlo", onclick: verprograma}) ],
 																						appendTo: container,
 																						position: "centerHV" });
 					}
@@ -1547,7 +1533,7 @@
 				};
 				
 				var initGame = function() {
-					human.credit = 0;
+					human.credit = 1;
 					screens.intro();
 				};
 				
