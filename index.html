@@ -363,6 +363,8 @@ y conseguir la democracia para la ciudadanía…" />
 		
 			var microSpaceInvaders = function() {
 				
+				var jugando = false;
+				
 				// element selector
 				var $ = function(selector, el) {  
 					if (!el) {el = document;}  
@@ -398,11 +400,19 @@ y conseguir la democracia para la ciudadanía…" />
 				
 				//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 				// game objects 
-				//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!												
+				//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!																
 				var container = $("#game"); 
 				var img, canvas, context, frameCounter, isGameOver;
 				//var spriteSheet = "si_sprite_sheet_bw.png";
 				var spriteSheet = "data:image/png;base64,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";
+				
+				var estadoPulsacion = {
+					botonPulsado: "false",
+					esRaton: "true",
+					esTableta: "false",
+					posicionX: "0",
+					posicionY: "0"
+				};				
 				
 				var sprites = {
 					alien_1: 			{	id: "alien_1",										
@@ -495,6 +505,10 @@ y conseguir la democracia para la ciudadanía…" />
 					
 					this.collide = function(o) {
 						return (this.state == "alive" && o.y >= this.y && o.y <= this.y+this.sprite.height && o.x >= this.x && o.x <= this.x+this.sprite.width);
+					};
+					
+					this.collide = function(pointX, pointY) {
+						return (this.state == "alive" && pointY >= this.y && pointY <= this.y+this.sprite.height && pointX >= this.x && pointX <= this.x+this.sprite.width);
 					};
 					
 					this.touchBorder = function() {
@@ -911,6 +925,14 @@ y conseguir la democracia para la ciudadanía…" />
 					
 					drawCannon: function() {
 						if (!isGameOver) {
+							if (estadoPulsacion != null && ((estadoPulsacion.esRaton && estadoPulsacion.botonPulsado) || estadoPulsacion.esTableta)){
+								if (this.moveCannon == "L" && estadoPulsacion.posicionX >= human.cannon.x + human.cannon.sprite.width/2){
+									this.moveCannon = "N";
+								} else if (this.moveCannon == "R" && estadoPulsacion.posicionX <= human.cannon.x + human.cannon.sprite.width/2){
+									this.moveCannon = "N";
+								}
+							}
+							
 							switch (this.moveCannon)
 							{
 								case "L":
@@ -1012,9 +1034,14 @@ y conseguir la democracia para la ciudadanía…" />
 								this.cannonBullet = new bullet({	sprite: sprites.cannonBullet, 
 																	x: this.cannon.x+(this.cannon.sprite.width/2)-sprites.cannonBullet.width/2, 
 																	y: this.cannon.y	});
+								if (estadoPulsacion != null && estadoPulsacion.esTableta) {
+									human.cannonFire = false;
+								}
 							}
 						}
 					}
+					
+					
 				};
 				
 				//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -1372,6 +1399,7 @@ y conseguir la democracia para la ciudadanía…" />
 					
 					if (human.credit > 0) {
 						human.credit--;
+						jugando = true;
 						screens.game();
 					}
 				};
@@ -1544,6 +1572,7 @@ y conseguir la democracia para la ciudadanía…" />
 				};
 				
 				var _gameOver = function() {
+					jugando = false;
 					// game over menu
 					if (!$("#divGameOver")) {
 						var txtArea = new textHelper.textArea({	id: "divGameOver",
@@ -1576,20 +1605,95 @@ y conseguir la democracia para la ciudadanía…" />
 					}
 				};
 				
-				var initGame = function() {
+				var initGame = function() {					
 					human.credit = 1;
 					screens.intro();
 				};
 				
+				function posicionRaton(e){
+					estadoPulsacion.posicionX = e.clientX;
+					estadoPulsacion.posicionY = e.clientY;
+				}
 				
+				function posicionToque(e){
+					estadoPulsacion.posicionX = e.touches[0].clientX;
+					estadoPulsacion.posicionY = e.touches[0].clientY;
+				}
+				
+				function toquePantalla(e){	
+					if (jugando){	
+						estadoPulsacion.posicionX = e.touches[0].clientX;
+						estadoPulsacion.posicionY = e.touches[0].clientY;					
+						gestionarClick(e.touches[0].clientX, e.touches[0].clientY, e.type);
+					}
+				}
+				
+				function clickPantalla(e) {								
+					gestionarClick(e.clientX, e.clientY, e.type);
+				}
+				
+				function gestionarClick(posicionX, posicionY, tipo) {
+					var accion = ""
+					if (tipo == "mousedown" || tipo == "touchstart") {
+						estadoPulsacion.botonPulsado = true;
+						accion = "empezar";
+					} else if (tipo == "mouseup" || tipo == "touchend") {
+						estadoPulsacion.botonPulsado = false;	
+						accion = "terminar";						
+					}	
+					if (human != null && human.cannon != null){						
+						if (human.cannon.collide(posicionX, posicionY))	{							
+							if (accion == "terminar") {
+								human.cannonFire = false;
+							}
+							if (accion == "empezar"){
+								human.cannonFire = true;
+							}														
+						} else if (posicionX < human.cannon.x){
+							if (accion == "empezar"){
+								human.moveCannon = "L";
+							}							
+							if (accion == "terminar") {
+								human.moveCannon = "N";
+							}
+						} else if (posicionX > human.cannon.x + human.cannon.sprite.width){
+							if (accion == "empezar"){
+								human.moveCannon = "R";
+							}							
+							if (accion == "terminar") {
+								human.moveCannon = "N";
+							}
+						}
+					}
+				}
+				
+				function configurarEventos() {
+					if ("ontouchstart" in document.documentElement)
+					{						
+						document.addEventListener('touchmove', posicionToque, true);						
+						document.addEventListener('touchstart', toquePantalla, true);
+						estadoPulsacion.esRaton = false;
+						estadoPulsacion.esTableta = true;
+					}
+					else
+					{
+						window.addEventListener('mousemove', posicionRaton, true);
+						window.onmousedown = clickPantalla;
+						window.onmouseup = clickPantalla;
+						estadoPulsacion.esRaton = true;
+						estadoPulsacion.esTableta = false;
+					}
+				}
+
 				//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 				// start game
 				//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!					
 				// event handlers
 				window.addEventListener("keydown", keyPressed, true);
 				window.addEventListener("keyup", keyPressed, true);
-				window.addEventListener("resize", resizeCanvas, true);
-				
+				window.addEventListener("resize", resizeCanvas, true);				
+				configurarEventos();
+
 				initGame();
 				
 			};
